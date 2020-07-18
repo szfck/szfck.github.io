@@ -156,33 +156,7 @@ install() {
 		;;
 	esac
 
-	clear
-	echo "zsh配置"
-	echo
-	echo " 1. skip"
-	echo
-	echo " 2. 安装"
-	echo
-	echo " 3. 删除"
-	echo
 	
-	read -p "$(echo -e "请选择 [${magenta}1-3$none]:")" choose
-	case $choose in
-	1)
-		# skip
-		;;
-	2)
-		install_zsh
-		zsh
-		;;
-	3)
-		rm -rf ~/.oh-my-zsh
-		;;
-	*)
-		error
-		;;
-	esac
-
 	clear
 	echo "tmux配置"
 	echo
@@ -234,6 +208,34 @@ install() {
 		error
 		;;
 	esac
+
+	clear
+	echo "zsh配置"
+	echo
+	echo " 1. skip"
+	echo
+	echo " 2. 安装"
+	echo
+	echo " 3. 删除"
+	echo
+	
+	read -p "$(echo -e "请选择 [${magenta}1-3$none]:")" choose
+	case $choose in
+	1)
+		# skip
+		;;
+	2)
+		install_zsh
+		zsh
+		;;
+	3)
+		rm -rf ~/.oh-my-zsh
+		;;
+	*)
+		error
+		;;
+	esac
+
 	# install_zsh
 	# install_tmux
 	# install_vim

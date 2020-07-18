@@ -1,6 +1,5 @@
 #!/bin/bash
-# cmd="apt-get"; if [[ $(command -v yum) ]]; then cmd="yum" fi; sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list; sed -i s@/security.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list; apt-get update; $cmd install -y git zip unzip curl wget vim tmux; bash <(curl https://szfck.github.io/install.sh)
-
+# cmd="apt-get"; if [[ $(command -v yum) ]]; then cmd="yum"; fi; sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list; sed -i s@/security.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list; apt-get update; $cmd install -y git zip unzip curl wget vim tmux; bash <(curl https://szfck.github.io/install.sh)
 
 red='\e[91m'
 green='\e[92m'
